@@ -11,9 +11,9 @@
                                     foreach ($results as $row)
                                         {
                                             echo "<tr><td>$row->id</td><td>$row->name</td><td>$row->email</td><td>$row->comment</td><td>";
-                                            echo anchor('zakaz/guest_form/'.$row->id, 'Edit', array('onclick' => "return confirm('Are you sure want to edit this record?')"));
-                                            echo " | ";
-                                            echo anchor('zakaz/delete/'.$row->id, 'Delete', array('onclick' => "return confirm('Are you sure want to delete this record?')"));
+                                           ?> <button type="submit" class="btn"><?php echo anchor('zakaz/guest_form/'.$row->id, 'Edit', array('onclick' => "return confirm('Are you sure want to edit this record?')"));?></button> <?php
+                                           
+                                            ?> <button type="submit" class="btn"><?php echo anchor('zakaz/delete/'.$row->id, 'Delete', array('onclick' => "return confirm('Are you sure want to delete this record?')"));?></button> <?php
                                             echo "</td></tr>";
                                     }
                             }
@@ -21,7 +21,7 @@
                            
                     </tbody>
            </table>
-            <?php echo anchor('zakaz/guest_form', 'Add New Record'); ?> 
+             <button type="submit" class="btn"><?php echo anchor('zakaz/guest_form', 'Add New Record'); ?> </button>
         </section>
     </div>
 </div>
